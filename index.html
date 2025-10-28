@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel de Fotográfias de mi vida cotidiana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0a3d62;
+            font-family: 'Arial Black', Arial, sans-serif;
+            margin-top: 20px;
+        }
+
+        .carrusel {
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+            border: 2px solid #1e3799;
+            padding: 10px;
+            border-radius: 15px;
+            background-color: #dff9fb;
+        }
+
+        .carrusel img {
+            width: 600px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .carrusel button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #1e3799;
+            color: white;
+            border: none;
+            font-size: 30px;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .carrusel button:hover {
+            background-color: #0a3d62;
+        }
+
+        #prev {
+            left: -60px;
+        }
+
+        #next {
+            right: -60px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Carrusel de Imágenes</h1>
+
+    <div class="carrusel">
+        <button id="prev">&#10094;</button>
+        <img id="imagen" src="imagenes/imagen1.jpeg" alt="Imagen del carrusel">
+        <button id="next">&#10095;</button>
+    </div>
+
+    <script>
+        // Lista de las 10 imágenes
+        let imagenes = [
+            "imagenes/imagen1.jpeg",
+            "imagenes/imagen2.jpeg",
+            "imagenes/imagen3.jpeg",
+            "imagenes/imagen4.jpeg",
+            "imagenes/imagen5.jpeg",
+            "imagenes/imagen6.jpeg",
+            "imagenes/imagen7.jpeg",
+            "imagenes/imagen8.jpeg",
+            "imagenes/imagen9.jpeg",
+            "imagenes/imagen10.jpeg"
+        ];
+
+        let indice = 0;
+
+        let img = document.getElementById("imagen");
+        let btnPrev = document.getElementById("prev");
+        let btnNext = document.getElementById("next");
+
+        function mostrarImagen() {
+            img.src = imagenes[indice];
+        }
+
+        btnNext.addEventListener("click", function() {
+            indice++;
+            if (indice >= imagenes.length) indice = 0;
+            mostrarImagen();
+        });
+
+        btnPrev.addEventListener("click", function() {
+            indice--;
+            if (indice < 0) indice = imagenes.length - 1;
+            mostrarImagen();
+        });
+    </script>
+</body>
+</html>

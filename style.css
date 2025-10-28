@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.carrusel {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.carrusel img {
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.carrusel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#prev {
+    left: -50px;
+}
+
+#next {
+    right: -50px;
+}
+.carrusel img {
+    width: 600px;      /* ancho fijo */
+    height: 400px;     /* alto fijo */
+    object-fit: cover; /* recorta la imagen si es necesario */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* sombra para dar profundidad */
+}
+h1 {
+    text-align: center;       /* centra horizontalmente */
+    color: #0a3d62;           /* azul oscuro, más “masculino” */
+    font-family: 'Arial Black', Arial, sans-serif;
+    margin-top: 20px;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;  /* gris claro */
+    color: #333;                /* texto oscuro */
+    text-align: center;
+}
+
+.carrusel button {
+    background-color: #1e3799;  /* azul oscuro */
+    color: white;
+}
+
+.carrusel button:hover {
+    background-color: #0a3d62;  /* azul más intenso al pasar el mouse */
+}
+.carrusel {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+    border: 2px solid #1e3799;  /* borde azul */
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #dff9fb;   /* azul muy claro */
+}
